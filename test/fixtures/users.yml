@@ -3,3 +3,9 @@ robb:
   last_name: "Schuneman"
   email: "robbschuneman@gmail.com"
   profile_name: 'chalkeater'
+
+george:
+  first_name: "George"
+  last_name: "Brett"
+  email: "pinetararrgh@gmail.com"
+  profile_name: "george"
