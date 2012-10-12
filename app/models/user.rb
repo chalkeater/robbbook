@@ -24,4 +24,11 @@ class User < ActiveRecord::Base
   	first_name + " " + last_name
   end
 
+  def gravatar_url
+    stripped_email = email.strip #remove any spaces
+    downcased_email = stripped_email.downcase #make everything lowercase
+    hash = Digest::MD5.hexdigest(downcased_email)
+
+    "http://gravatar.com/avatar/#{hash}" # #{} will replace the listed value with the variable
+  end
 end
