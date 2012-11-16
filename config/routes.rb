@@ -1,6 +1,4 @@
 Robbbook::Application.routes.draw do
-  resources :events
-
   get "profiles/show"
 
   devise_for :users
