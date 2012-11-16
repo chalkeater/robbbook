@@ -9,18 +9,13 @@ gem 'devise'
 gem 'simple_form'
 
 # Heroku does not support sqlite3 - so we'll use it only in development and testing
-# in production heroku can deal with the database using postgres.
+# in production heroku can deal with the database
 group :development, :test do
 	gem 'sqlite3'
 end
 
 group :production do
 	gem "pg"
-end
-
-# We only want to use the gem 'shoulda' with our test cases
-group :test do
-	gem 'shoulda'
 end
 
 # Gems used only for assets and not required
