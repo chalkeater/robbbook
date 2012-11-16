@@ -9,3 +9,9 @@ george:
   last_name: "Brett"
   email: "pinetararrgh@gmail.com"
   profile_name: "george"
+
+kern:
+	first_name: "Kern"
+	last_name: "Jackson"
+	email: "kernjackson@gmail.com"
+	profile_name: "TheKern"
