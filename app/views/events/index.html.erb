@@ -4,19 +4,24 @@
 
 <%= link_to "Post a New Event", new_event_path, class: "btn btn-success" %>
 
-<% @events.each do |events| %> 
+<% @events.each do |event| %> 
   <div class = "event">
     <div class = "row">
-
-      <div class = "span1">
-      <%= image_tag status.user.gravatar_url %>
-      </div>
-      
+  
       <div class = "span7">     
         <strong><%= event.name %> </strong>
           
-        <p> <%= event.content %> </p>
-          
+        <p> <%= event.description %> </p>
+
+        <p> <%= event.start_time %> </p>
+
+        <p> <%= event.end_time %> </p>
+
+        <p> <%= event.location %> </p>
+
+        <p> <%= event.street %> </p>
+
+        <p> <%= event.city %> </p>
         <div class = "meta">
       
           <%= link_to time_ago_in_words(event.created_at) + " ago", event %>
