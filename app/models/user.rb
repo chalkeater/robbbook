@@ -19,6 +19,7 @@ class User < ActiveRecord::Base
                            }
 
   has_many :statuses
+  has_many :events #This is linking a user to many events.
   			  
   def full_name
   	first_name + " " + last_name
