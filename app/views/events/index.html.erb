@@ -1,0 +1,35 @@
+<div class = "page-header">
+  <h1>All of the Events</h1>
+</div>
+
+<%= link_to "Post a New Event", new_event_path, class: "btn btn-success" %>
+
+<% @events.each do |events| %> 
+  <div class = "event">
+    <div class = "row">
+
+      <div class = "span1">
+      <%= image_tag status.user.gravatar_url %>
+      </div>
+      
+      <div class = "span7">     
+        <strong><%= event.name %> </strong>
+          
+        <p> <%= event.content %> </p>
+          
+        <div class = "meta">
+      
+          <%= link_to time_ago_in_words(event.created_at) + " ago", event %>
+      
+          <span class="admin">
+            |
+            <%= link_to "Edit", edit_event_path(event) %> |
+            <%= link_to "Delete", event, method: :delete, data: { confirm: "Are you sure you want to delete this event?"} %>
+
+          </span>
+
+        </div>
+      </div>
+    </div>
+  </div>
+<%end %>
