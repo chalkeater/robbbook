@@ -7,6 +7,8 @@ gem 'rails', '3.2.1'
 
 gem 'devise'
 gem 'simple_form'
+gem "ruby-openid"
+gem "rack-openid"
 
 # Heroku does not support sqlite3 - so we'll use it only in development and testing
 # in production heroku can deal with the database
